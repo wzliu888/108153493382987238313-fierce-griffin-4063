@@ -19,7 +19,10 @@ function Clock() {
 
   return (
     <div className="text-2xl font-mono mb-4 text-[#61dafb]">
-      {time.toLocaleTimeString()}
+      <div>{time.toLocaleTimeString()}</div>
+      <div className="text-lg opacity-75 mt-1">
+        {time.toLocaleDateString()}
+      </div>
     </div>
   )
 }
