@@ -136,3 +136,25 @@ code {
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes reverse-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.animate-reverse-spin {
+  animation: reverse-spin 15s linear infinite;
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
