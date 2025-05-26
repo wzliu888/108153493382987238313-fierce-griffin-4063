@@ -18,8 +18,13 @@ function Clock() {
   }, [])
 
   return (
-    <div className="text-2xl font-mono mb-4 text-[#61dafb]">
-      {time.toLocaleTimeString()}
+    <div className="font-mono mb-4 text-[#61dafb]">
+      <div className="text-2xl">
+        {time.toLocaleTimeString()}
+      </div>
+      <div className="text-sm opacity-75 mt-1">
+        {time.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+      </div>
     </div>
   )
 }
